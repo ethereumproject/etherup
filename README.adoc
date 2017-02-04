@@ -1,0 +1,58 @@
+:rootdir: .
+:imagesdir: {rootdir}/images
+
+ifdef::env-github,env-browser[:badges:]
+ifdef::env-github,env-browser[:outfilesuffix: .adoc]
+
+= EtherUp
+
+Bootstrap project to start working with https://ethereumclassic.github.io/[ethereum classic] as quickly as possible.
+
+== Requirements
+
+* Install https://www.virtualbox.org/wiki/Downloads[VirtualBox]
+* Install https://www.vagrantup.com/downloads.html[Vagrant]
+
+== How to run
+
+Set up local https://ethcore.io/parity.html[parity node]:
+
+----
+vagrant up
+----
+
+Check parity client version:
+
+TBD
+
+Tear down local parity node:
+
+----
+vagrant halt
+----
+
+== Customization
+
+https://ethcore.io/parity.html[Parity] is an Ethereum client actively developed as an open source project.
+
+There are a default configuration (link:../parity/default.toml[parity/default.toml]) used by default by Vagrant.
+
+However, you are free to use your own alternative variants, for example:
+
+----
+env CONFIG=with_dapps CHAIN=example1 vagrant up
+----
+
+or even:
+
+----
+env CONFIG=with_dapps CHAIN=example1 vagrant provision
+----
+
+In these examples are used simple name conventions.
+'`with_dapps`' implies the existence of configuration file at 'parity/with_dapps.toml'.
+For chain '`example1`' it corresponds to 'parity/chain/example1.json' respectively.
+
+== Licence
+
+Apache 2.0
