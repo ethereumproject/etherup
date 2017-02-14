@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision "shell", name: "install parity", inline: <<-SHELL
     NAME=parity
-    VERSION=1.5.0
+    VERSION=1.5.2
     DEB=${NAME}_${VERSION}_amd64.deb
     URL=http://d1h4xl4cr1h0mo.cloudfront.net/v${VERSION}/x86_64-unknown-linux-gnu/${DEB}
 
