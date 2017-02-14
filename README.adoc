@@ -12,6 +12,7 @@ Bootstrap project to start working with https://ethereumclassic.github.io/[ether
 
 * Install https://www.virtualbox.org/wiki/Downloads[VirtualBox]
 * Install https://www.vagrantup.com/downloads.html[Vagrant]
+* Install http://www.groovy-lang.org/download.html#sdkman[Groovy]
 
 == How to run
 
@@ -23,7 +24,10 @@ vagrant up
 
 Check parity client version:
 
-TBD
+----
+> examples/client_version.groovy
+Client version: Parity//v1.5.2-beta-948a538-20170208/x86_64-linux-gnu/rustc1.15.0
+----
 
 Tear down local parity node:
 
