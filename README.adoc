@@ -22,11 +22,18 @@ Set up local https://ethcore.io/parity.html[parity node]:
 vagrant up
 ----
 
-Check parity client version:
+Check parity client version (link:./examples/client_version.groovy[client_version]):
 
 ----
 > examples/client_version.groovy
 Client version: Parity//v1.5.2-beta-948a538-20170208/x86_64-linux-gnu/rustc1.15.0
+----
+
+Receive test account balance (link:./examples/account_balance.groovy[account_balance]):
+
+----
+> examples/account_balance.groovy
+Test account balance: 1606938044258990275541962092341162602522202.9938 ether
 ----
 
 Tear down local parity node:
@@ -39,7 +46,7 @@ vagrant halt
 
 https://ethcore.io/parity.html[Parity] is an Ethereum client actively developed as an open source project.
 
-There are a default configuration (link:../parity/default.toml[parity/default.toml]) used by default by Vagrant.
+There are a default configuration (link:./parity/default.toml[parity/default.toml]) used by default by Vagrant.
 
 However, you are free to use your own alternative variants, for example:
 
